@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+<div style="margin: 10px;padding: 10px;">
+  <p>
+    <b>Name:</b>
+    <%= @book.name %>
+  </p>
+  <p>
+    <b>Author:</b>
+    <%= @book.author.name %>
+  </p>
+  <p>
+    <b>Price:</b>
+    <%= @book.price %>
+  </p>
+  <p>
+    <b>Quantity:</b>
+    <%= @book.quantity %>
+  </p>
+  <p>
+    <b>Location:</b>
+    <%= @book.location.name %>
+  </p>
+</div>
+<div style="margin: 10px;width: 500px;text-align: center">
+  <%= link_to 'Edit', edit_book_path(@book) %> |
+  <%= link_to 'Back', books_path %>
+</div>

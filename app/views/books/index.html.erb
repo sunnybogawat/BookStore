@@ -1,0 +1,39 @@
+<div id="wrapper-contents" class="clearfix">
+  <p><h2>Book Listing</h2></p>
+<table cellpadding="2" cellspacing="2" border="1 px solid;" style="width: 900px;">
+  <tr>
+    <td colspan="2" class="darkGray"><%= link_to 'Sort by Author', books_path(:order_by => "author") %></td>
+    <td colspan="2" class="darkGray"><%= link_to 'Sort by Price low', books_path(:order_by => "price_low") %></td>
+    <td colspan="2" class="darkGray"><%= link_to 'Sort by Price high', books_path(:order_by => "price_heigh") %></td>
+    <td colspan="2" class="darkGray"><%= link_to 'Sort by Location', books_path(:order_by => "location") %></td>
+  </tr>
+  <tr>
+    <th>Name</th>
+    <th>Author</th>
+    <th>Price</th>
+    <th>Quantity</th>
+    <th>Location</th>
+    <th colspan="3"></th>
+  </tr>
+  <% unless @books.blank? %>
+    <% @books.each do |book| %>
+      <tr>
+        <td><%= book.name %></td>
+        <td><%= book.author.name %></td>
+        <td><%= book.price %></td>
+        <td><%= book.quantity %></td>
+        <td><%= book.location.name%></td>
+        <td><%= link_to 'Show', book %></td>
+        <td><%= link_to 'Edit', edit_book_path(book) %></td>
+        <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  <%else%>
+    <tr>
+      <td colspan="8">No Books Available</td>
+    </tr>
+  <%end%>
+</table>
+</div>
+<br />
+<%= link_to 'Add New Book', new_book_path %>

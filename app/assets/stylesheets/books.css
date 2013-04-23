@@ -1,0 +1,102 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+body, div, h1, h2, input, p{ margin:0; padding:0; }
+body{
+    margin:0;
+    padding:0;
+    font-family:Helvetica, Arial, Helvetica, sans-serif;
+}
+#wrapper{
+    width:970px;
+    margin:auto;
+}
+
+#header{
+    width:100%;
+    background:#019AD2;
+    height: 100px;
+}
+#container {
+    width: 980px;
+    padding: 15px 0px 50px;
+    margin: 0 auto;
+}
+.clearfix {
+    display: inline-block;
+}
+
+#header .logo{
+    text-align: center;
+    margin-top: 5px;
+    padding-top: 10px;
+}
+.setting {
+    font-size: 11px;
+    padding: 25px 0 2px;
+    text-align: right;
+    margin-right: 5px;
+    color: #ffffff;
+}
+
+#controlS a{
+    color: #000;
+    text-decoration: none;
+}
+#controlS a:hover{
+    color: #fff;
+    text-decoration:none;
+}
+.user-welcome {
+    font-size: 11px;
+    height: 18px;
+    line-height: 18px;
+    position: relative;
+}
+#footer {
+    border-top: 1px solid;
+    margin: 15px auto 0px;
+    padding: 5px;
+    width: 1000px;
+    text-align: center;
+}
+.clear{ clear:both;}
+
+.fr{
+    float: right;
+}
+
+#wrapper-contents {
+    min-height: 300px;
+    width: 1000px;
+    text-align: center;
+}
+
+
+.darkGray{
+    background-color: #d2d2d2
+}
+
+#loginDiv{
+    padding: 5px;
+}
+.actions{
+    margin: 10px;
+}
+
+.btn-share {
+    float: left;
+    border: #d2d2d2 solid 1px;
+    margin-top: -1px;
+    width: 83px;
+    height: 30px;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 52px;
+    cursor: pointer;
+    font-family: 'HelveticaNeue',Sans-Serif;
+    color: #333333;
+    background-color: #FAFAFA;
+}

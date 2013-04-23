@@ -1,0 +1,10 @@
+<div id="header">
+  <h2 class="logo"> Book Store </h2>
+  <div class="setting" id="controlS">
+    <% if current_user %>
+      <span id="user_welcome" class="user-welcome">Welcome <%= current_user.email %></span> | <%= link_to 'Sign Out', destroy_user_session_path(),:method=>'delete'%>
+    </div>
+  <%else%>
+    <%= link_to "Sign up", new_registration_path(resource_name) %> | <%= link_to "Sign in", new_session_path(resource_name) %>
+  <%end%>
+</div>
